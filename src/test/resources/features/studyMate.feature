@@ -1,3 +1,4 @@
+@regression @product @smoke
 Feature: Study Mate Login
 
 

@@ -21,14 +21,15 @@ public class StudyMateLogin_steps {
     }
     @Given("user enters credentials {string} and {string} and clicks login")
     public void user_enters_credentials_and_and_clicks_login(String email, String password) {
-        studyMateLoginPage.emailInputBox.sendKeys("studyMateLoginEmail");
-        studyMateLoginPage.passwordInputBox.sendKeys("studyMateLoginPassword");
+        studyMateLoginPage.emailInputBox.sendKeys("studymate@gmail.com");
+        studyMateLoginPage.passwordInputBox.sendKeys("123123");
         studyMateLoginPage.loginButtonS.click();
         Flow.wait(500);
 
     }
     @Then("user should be successfully login to application")
     public void user_should_be_successfully_login_to_application() {
+
 
 
     }
