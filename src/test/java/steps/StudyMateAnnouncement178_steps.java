@@ -21,7 +21,6 @@ public class StudyMateAnnouncement178_steps {
 
     @Given("user click on the announcement page located on the left side bar")
     public void user_click_on_the_announcement_page_located_on_the_left_side_bar() {
-        groupNumber = adminPage.getTotalGroups();
         studyMateAnnouncementsPage.sidebarOptions.get(4).click();
         Flow.wait(500);
 
@@ -53,15 +52,6 @@ public class StudyMateAnnouncement178_steps {
         for(WebElement announcementCarts: studyMateAnnouncementsPage.announcementsInsideGroup){
             Assert.assertEquals(groupName, announcementCarts.getText());
         }
-
-
-
-
-
-
-
-
-
     }
 
 }

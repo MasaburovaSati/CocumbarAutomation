@@ -28,6 +28,54 @@ public class StudyMateAnnouncementsPage {
     @FindBy(xpath = "(//input[@type='text'])[2]")
     public List<WebElement> paginationList;
 
+    @FindBy (xpath = "//button[.='Add an announcement']")
+    public WebElement addAnAnnouncement;
+
+     @FindBy (xpath = "//p[.='Add an announcement']")
+    public WebElement textAddAnnouncement;
+
+
+     @FindBy (xpath = "//textarea[@name='text']")
+    public WebElement textOfAnnouncement;
+
+     @FindBy (id = "mui-component-select-groups")
+    public WebElement groupOption;
+
+     @FindBy (xpath = "(//ul[@role='listbox'])/li")
+    public List<WebElement> listGroupName;
+
+     @FindBy (xpath = "//button[.='Add']")
+    public WebElement addBtn;
+
+     @FindBy (xpath = "(//button)[4]")
+    public  WebElement threeDotsBtn;
+
+     @FindBy (xpath = "(//ul)[2]")
+    public List<WebElement> threeDotDropdown;
+
+    @FindBy(xpath = "//p[.='pagination.show']/../p[2]")
+    public WebElement totalAmountResult;
+
+    @FindBy (xpath = "//button[.='Save']")
+    public WebElement saveBtn;
+
+    @FindBy (xpath = "(//div/p)[2]")
+    public WebElement firstAnnouncementText;
+
+
+
+
+
+    public int getAnAnnouncement() {
+        String totalResultStr = totalAmountResult.getText();
+        String totalNum = totalResultStr.substring(totalResultStr.indexOf(" ") + 1);
+        int totalNumInt = Integer.parseInt(totalNum.trim());
+        return totalNumInt;
+    }
+
+
+
+
 
 
 
